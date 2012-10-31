@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">EjemploCamara</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="take_photo">Tomar Foto</string>
+    <string name="take_from_camera">Llamar Aplicacion Camara (photo)</string>
+    <string name="take_from_video_camera">Llamar Aplicacion Camara (video)</string>
+    <string name="take_video">Tomar Video</string>
+    <string name="title_activity_photo">Photo</string>
+    <string name="title_activity_video">Video</string>
+	<string name="select_source">Seleccione el origen</string>
+	<string name="photo_error">Error al obtener la imagen</string>
+</resources>
