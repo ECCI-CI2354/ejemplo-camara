@@ -33,7 +33,7 @@ public class VideoActivity extends Activity implements SurfaceHolder.Callback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
         getActionBar().setDisplayHomeAsUpEnabled(true);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         videoSurface = (SurfaceView) findViewById(R.id.videoSurface);
         mholder = videoSurface.getHolder();
         mholder.addCallback(this);
@@ -61,14 +61,17 @@ public class VideoActivity extends Activity implements SurfaceHolder.Callback {
 
     public void record(View view) {
 
-        mr.setVideoEncoder(MediaRecorder.VideoSource.DEFAULT);
-        mr.setAudioEncoder(MediaRecorder.VideoEncoder.MPEG_4_SP);
-        mr.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mr.setPreviewDisplay(mholder.getSurface());
         mr.setCamera(mCamera);
+
+        mr.setVideoSource(MediaRecorder.VideoSource.DEFAULT);
+        mr.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+
         File root = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES);
         videoFile = new File(root, System.currentTimeMillis() + ".3gpp");
         mr.setOutputFile(videoFile.getAbsolutePath());
+
+        mr.setVideoEncoder(MediaRecorder.VideoEncoder.MPEG_4_SP);
         try {
             mr.prepare();
         } catch (IllegalStateException e) {
