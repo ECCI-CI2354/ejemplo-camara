@@ -56,6 +56,7 @@ public class PhotoActivity extends Activity implements SurfaceHolder.Callback {
 		try {
 			camera.setPreviewDisplay(mHolder);
 			camera.startPreview();
+			
 			//TODO dibujar sobre el preview si es necesario (realidad aumentada)
 		} catch (IOException e) {
 			Log.e(TAG, e.getMessage(), e);
