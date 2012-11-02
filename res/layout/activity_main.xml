@@ -1,8 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
     <Button
         android:id="@+id/cameraButton"
@@ -11,6 +11,7 @@
         android:layout_marginTop="10dp"
         android:onClick="useCamera"
         android:text="@string/take_from_camera" />
+
     <Button
         android:id="@+id/videoCameraButton"
         android:layout_width="match_parent"
@@ -18,6 +19,7 @@
         android:layout_marginTop="10dp"
         android:onClick="useVideoCamera"
         android:text="@string/take_from_camera" />
+
     <Button
         android:id="@+id/photoButton"
         android:layout_width="match_parent"
@@ -32,5 +34,25 @@
         android:layout_marginTop="10dp"
         android:onClick="takeVideo"
         android:text="@string/take_video" />
-    
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/photoPreview"
+            android:layout_width="320dip"
+            android:layout_height="320dip"
+            android:layout_gravity="center"
+            android:background="#cccccc"
+            android:scaleType="centerCrop" />
+
+        <VideoView
+            android:id="@+id/videoPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+    </FrameLayout>
+
 </LinearLayout>
