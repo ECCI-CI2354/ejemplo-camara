@@ -12,4 +12,7 @@
     <string name="title_activity_video">Video</string>
 	<string name="select_source">Seleccione el origen</string>
 	<string name="photo_error">Error al obtener la imagen</string>
+	
+	<string name="record">Record</string>
+	<string name="stop">Stop</string>
 </resources>
